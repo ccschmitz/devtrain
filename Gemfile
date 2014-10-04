@@ -6,10 +6,12 @@ ruby '2.1.1'
 
 gem 'rails', '4.2.0.beta1'
 
+gem 'acts-as-taggable-on'
 gem 'bcrypt'
 gem 'devise'
 gem 'omniauth'
 gem 'sass-rails', '5.0.0.beta1'
+gem 'simple_form'
 gem 'uglifier'
 gem 'unicorn'
 
@@ -30,9 +32,9 @@ group :development do
 end
 
 group :development, :test do
+  gem 'spring-commands-rspec'
   gem 'factory_girl_rails'
   gem 'pry-rails'
-  gem 'spring-commands-rspec'
   gem 'sqlite3'
 end
 
