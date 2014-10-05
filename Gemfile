@@ -1,23 +1,23 @@
 source 'https://rubygems.org'
-source 'https://rails-assets.org'
 
 ruby '2.1.1'
 #ruby-gemset=devtrain
 
-gem 'rails', '4.2.0.beta1'
+gem 'rails', '4.1.6'
 
+gem 'activeadmin', github: 'activeadmin', branch: 'master'
 gem 'acts-as-taggable-on'
 gem 'bcrypt'
+gem 'better_errors'
+gem 'binding_of_caller'
 gem 'devise'
+gem 'foundation-rails'
 gem 'omniauth'
-gem 'sass-rails', '5.0.0.beta1'
+gem 'sass-rails'
 gem 'simple_form'
+gem 'slim-rails'
 gem 'uglifier'
 gem 'unicorn'
-
-# Bower assets via rails-assets.org
-gem 'rails-assets-bootstrap'
-gem 'rails-assets-angular'
 
 group :development do
   gem 'awesome_print'
@@ -32,9 +32,9 @@ group :development do
 end
 
 group :development, :test do
-  gem 'spring-commands-rspec'
   gem 'factory_girl_rails'
   gem 'pry-rails'
+  gem 'spring-commands-rspec'
   gem 'sqlite3'
 end
 
