@@ -4,14 +4,18 @@ html
     title Devtrain
 
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-    = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
 
   body
-    - if devise_controller?
-      .row
-        .large-6.large-offset-3.columns
-          .panel style="margin-top: 50px"
-            = yield
-    - else
-      = yield
+    = render 'navigation'
+
+    .container
+      - if devise_controller?
+        .row
+          .medium-6.medium-offset-3.columns
+            .panel.devise-container
+              = yield
+      - else
+        = yield
+
+    = javascript_include_tag 'application'

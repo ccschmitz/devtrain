@@ -12,6 +12,7 @@ gem 'better_errors'
 gem 'binding_of_caller'
 gem 'devise'
 gem 'foundation-rails'
+gem 'jquery-rails'
 gem 'omniauth'
 gem 'sass-rails'
 gem 'simple_form'
@@ -43,6 +44,7 @@ group :production do
 end
 
 group :test do
+  gem 'capybara'
   gem 'rspec-rails'
   gem 'shoulda-matchers'
 end
