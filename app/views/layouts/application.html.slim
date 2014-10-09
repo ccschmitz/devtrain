@@ -3,19 +3,18 @@ html
   head
     title Devtrain
 
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = stylesheet_link_tag 'application', media: 'all'
     = csrf_meta_tags
 
   body
     = render 'navigation'
 
-    .container
-      - if devise_controller?
-        .row
-          .medium-6.medium-offset-3.columns
-            .panel.devise-container
-              = yield
-      - else
-        = yield
+    - if devise_controller?
+      .row
+        .medium-6.medium-offset-3.columns
+          .panel.devise-container
+            = yield
+    - else
+      = yield
 
     = javascript_include_tag 'application'
