@@ -23,6 +23,16 @@
   .button
     top: 15px
 
+// Footer
+.footer
+  padding: 20px 0
+
+  nav a
+    margin-right: 15px
+
+  p
+    margin: 0
+
 // Forms
 form
   .field_with_errors
@@ -34,24 +44,51 @@ form
   margin-top: 50px
 
 // Hero
+$hero-padding: 150px
+
 .hero
   background: image-url('background.jpg')
   background-size: cover
   color: #fff
-  padding: 175px 0 250px
+  padding: $hero-padding 0 ($hero-padding + 75px)
   vetical-align: middle
   text-align: center
 
-  h1, p
-    color: #fff
+  .content
     margin: 0 auto
     max-width: 900px
 
+  h1, p
+    color: #fff
+
   h1
     font-weight: 900
-    margin-bottom: 25px
+    margin-bottom: 10px
 
   p
     font-size: 24px
     font-weight: 600
-    opacity: 0.7
+    margin-bottom: 50px
+    opacity: 0.8
+
+// CTA Bar
+.cta
+  background: #eee
+  border-bottom: 1px solid #ddd
+  margin: 0 0 25px
+  padding: 35px 0
+
+  h2
+    margin: 0
+
+  .button
+    margin: 0
+
+// The Team
+.the-team
+  background: $primary-color
+  color: #fff
+  padding: 40px 0 20px
+
+  h2
+    color: #fff
