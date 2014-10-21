@@ -35,6 +35,7 @@ end
 group :development, :test do
   gem 'factory_girl_rails'
   gem 'pry-rails'
+  gem 'rspec-rails'
   gem 'spring-commands-rspec'
   gem 'sqlite3'
 end
@@ -45,6 +46,5 @@ end
 
 group :test do
   gem 'capybara'
-  gem 'rspec-rails'
   gem 'shoulda-matchers'
 end

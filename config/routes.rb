@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :lessons, only: [:index, :show]
   resources :series, only: [:index, :show]
   resources :topics, only: [:index, :show]
+  resources :workshops, only: [:index, :show]
 
   get :about, to: 'pages#about'
   get :faq, to: 'pages#faq'
