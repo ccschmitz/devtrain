@@ -5,9 +5,9 @@
 
     .row
       .medium-4.medium-offset-2.columns
-        a.button.large.round.secondary.expand disabled="disabled" Screencasts (Coming Soon)
+        = link_to('Screencasts', lessons_path, class: 'button large round secondary expand')
       .medium-4.columns
-        a.button.large.round.expand Upcoming Workshops
+        = link_to('Upcoming Workshops', workshops_path, class: 'button large round expand')
       .medium-2.columns
 
 .cta
@@ -24,14 +24,14 @@
 
     p Stay tuned for introductory screencasts to Ruby on Rails and intermediate/advanced training on AngularJS and React.
 
+    h3 Special Offer
+    p Sign up now to be the first to know about our new courses and receive a lifetime discount for being an early supporter.
+    = link_to('Sign Me Up', new_user_registration_path, class: 'button round')
+
   .medium-6.columns
     h2 Upcoming Workshops
     hr
 
-    h4 Intro to Rails
-    p
-      strong November 15th, 2015 at The Docking Station
-    p By the end of this workshop you will have built a web application where users will be able to create accounts, store information in your system and display it back in the browser. The application will be live on the internet for everyone to see and for you to show off to your friends and family. In a future workshop we might even show you how to charge people to use your app!
-
+    = render 'workshops/workshop'
 
 = render 'instructors'
