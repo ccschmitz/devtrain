@@ -6,7 +6,7 @@ html class="#{params[:controller]}-#{params[:action]}"
     = stylesheet_link_tag 'application', media: 'all'
     = csrf_meta_tags
 
-  body class=(body_class + (' footer-fixed' if @fixed_footer))
+  body class=(body_class + (@fixed_footer ? ' footer-fixed' : ''))
     = render 'navigation'
 
     - if devise_controller?
