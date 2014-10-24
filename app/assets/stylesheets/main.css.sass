@@ -30,6 +30,9 @@
 
 // Footer
 .footer
+  background: #eee
+  border-bottom: 1px solid #ddd
+  border-top: 1px solid #fff
   padding: 20px 0
 
   nav a
@@ -37,6 +40,13 @@
 
   p
     margin: 0
+
+// TODO: Remove this once there is content here
+.footer-fixed .footer
+  bottom: 0
+  left: 0
+  position: fixed
+  right: 0
 
 // Forms
 form
@@ -100,3 +110,7 @@ $hero-padding: 150px
 
   h2, h3
     color: #fff
+
+  a
+    color: #fff
+    text-decoration: underline

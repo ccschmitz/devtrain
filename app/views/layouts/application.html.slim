@@ -1,12 +1,12 @@
 doctype html
 html class="#{params[:controller]}-#{params[:action]}"
   head
-    title Devtrain
+    title DevTrain :: Professionl web developer training in Green Bay, WI
 
     = stylesheet_link_tag 'application', media: 'all'
     = csrf_meta_tags
 
-  body
+  body class=(body_class + (' footer-fixed' if @fixed_footer))
     = render 'navigation'
 
     - if devise_controller?

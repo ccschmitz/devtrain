@@ -11,7 +11,9 @@ gem 'bcrypt'
 gem 'better_errors'
 gem 'binding_of_caller'
 gem 'devise'
+gem 'flutie'
 gem 'foundation-rails'
+gem 'intercom-rails'
 gem 'jquery-rails'
 gem 'omniauth'
 gem 'sass-rails'
@@ -27,6 +29,7 @@ group :development do
   gem 'guard-livereload', require: false
   gem 'guard-migrate', require: false
   gem 'guard-rspec', require: false
+  gem 'letter_opener'
   gem 'meta_request'
   gem 'spring'
   gem 'terminal-notifier-guard'
