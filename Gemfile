@@ -21,6 +21,7 @@ gem 'simple_form'
 gem 'slim-rails'
 gem 'uglifier'
 gem 'unicorn'
+gem 'faraday'
 
 group :development do
   gem 'awesome_print'
