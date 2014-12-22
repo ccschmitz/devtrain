@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.1.1'
+ruby '2.1.5'
 #ruby-gemset=devtrain
 
 gem 'rails', '4.1.6'
@@ -31,6 +31,7 @@ group :development do
   gem 'guard-rspec', require: false
   gem 'letter_opener'
   gem 'meta_request'
+  gem 'rubocop'
   gem 'spring'
   gem 'terminal-notifier-guard'
 end
