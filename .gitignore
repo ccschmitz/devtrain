@@ -17,3 +17,5 @@
 
 /config/database.yml
 /.ruby-version
+
+eventbrite_api_key_info.txt
