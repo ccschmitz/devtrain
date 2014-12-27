@@ -52,5 +52,5 @@ end
 
 group :test do
   gem 'capybara'
-  gem 'shoulda-matchers'
+  gem 'shoulda-matchers', require: false
 end

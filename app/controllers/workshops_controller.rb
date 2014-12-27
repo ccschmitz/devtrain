@@ -1,6 +1,6 @@
 class WorkshopsController < ApplicationController
   def index
-
+    @workshops = Workshop.upcoming
   end
 
   def refresh

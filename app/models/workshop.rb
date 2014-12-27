@@ -3,6 +3,8 @@ class Workshop < ActiveRecord::Base
   validates :name, presence: true
   validates :description, presence: true
 
+  scope :upcoming, -> { where('starts_at > ?', Time.now) }
+
   def self.refresh
     conn = Faraday.new(url: "https://www.eventbriteapi.com") do |req|
       req.adapter Faraday.default_adapter

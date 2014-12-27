@@ -18,4 +18,10 @@ FactoryGirl.define do
   factory :tag, class: ActsAsTaggableOn::Tag do
     sequence(:name) { |n| "Tag #{n}" }
   end
+
+  factory :workshop do
+    name 'Intro to Rails'
+    description 'An intro to Ruby on Rails.'
+    starts_at Time.now + 1.day
+  end
 end
