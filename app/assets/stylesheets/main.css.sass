@@ -114,3 +114,52 @@ $hero-padding: 150px
   a
     color: #fff
     text-decoration: underline
+
+// Testimonials
+.testimonial
+
+
+  blockquote
+    background: #f4f4f4
+    border: none
+    padding: 15px
+    position: relative
+
+    p
+      font-size: 13px
+      font-style: italic
+
+    cite
+      display: block
+      font-size: 18px
+      font-style: normal
+      font-weight: bold
+      line-height: 1em
+
+      &:before
+        content: ''
+
+    .title
+      color: #999
+      font-size: 12px
+
+    &:before
+      border: 10px solid transparent
+      border-top: 10px solid #f4f4f4
+      bottom: -20px
+      content: ' '
+      margin-left: -10px
+      left: 50%
+      position: absolute
+
+  .avatar
+    display: block
+    margin: 0 auto
+
+// Avatars
+.avatar
+  border-radius: 500px
+
+  &.small
+    height: 80px
+    width: 80px

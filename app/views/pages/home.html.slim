@@ -19,19 +19,15 @@
 
 .row
   .medium-6.columns
-    h2 Latest Screencasts
-    hr
-
-    p Stay tuned for introductory screencasts to Ruby on Rails and intermediate/advanced training on AngularJS and React.
-
-    h3 Special Offer
-    p Sign up now to be the first to know about our new courses and receive a lifetime discount for being an early supporter.
-    = link_to('Sign Me Up', new_user_registration_path, class: 'button round')
-
-  .medium-6.columns
     h2 Upcoming Workshops
     hr
 
     = render 'workshops/workshop'
+
+  .medium-6.columns
+    h2 What People Are Saying
+    hr
+
+    = render 'testimonials/tommy_byrne'
 
 = render 'instructors'
