@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   get :about, to: 'pages#about'
   get :faq, to: 'pages#faq'
+  get :testimonials, to: 'pages#testimonials'
   get :requests, to: redirect('http://uservoice.com')
   get :support, to: redirect('http://intercom.io')
 
