@@ -103,6 +103,8 @@ GEM
     factory_girl_rails (4.4.1)
       factory_girl (~> 4.4.0)
       railties (>= 3.0.0)
+    faraday (0.9.0)
+      multipart-post (>= 1.2, < 3)
     ffi (1.9.5)
     flutie (2.0.0)
     formatador (0.2.5)
@@ -173,6 +175,7 @@ GEM
     mini_portile (0.6.0)
     minitest (5.4.2)
     multi_json (1.10.1)
+    multipart-post (2.0.0)
     nokogiri (1.6.3.1)
       mini_portile (= 0.6.0)
     omniauth (1.2.2)
@@ -325,6 +328,7 @@ DEPENDENCIES
   capybara
   devise
   factory_girl_rails
+  faraday
   flutie
   foundation-rails
   guard

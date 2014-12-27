@@ -1,6 +1,6 @@
-h3 Intro to Rails
-h5 November 15th, 2015 at #{link_to('The Docking Station', 'http://thedockingstation.net', target: '_blank')}
+h3 = workshop.name
+h5 #{workshop.starts_at.to_s(:long_ordinal)} at #{link_to(workshop.venue_name, workshop.venue_map_url, target: '_blank')}
 
-p By the end of this workshop you will have built a web application where users will be able to create accounts, store information in your system and display it back in the browser. The application will be live on the internet for everyone to see and for you to show off to your friends and family. In a future workshop we might even show you how to charge people to use your app!
+p = truncate(workshop.description, length: 500)
 
-= link_to('Learn More & Register', 'https://www.eventbrite.com/e/intro-to-ruby-on-rails-workshop-tickets-13753177123', class: 'button round')
+= link_to('Learn More & Register', workshop.url, target: '_blank', class: 'button round')
