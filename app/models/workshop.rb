@@ -1,4 +1,7 @@
 class Workshop < ActiveRecord::Base
+  # Chris's organizer id: 7593828287
+  # Tim's organizer id: 7808542841
+  ORGANIZER_IDS = ['7593828287', '7808542841']
 
   validates :name, presence: true
   validates :description, presence: true
@@ -6,13 +9,24 @@ class Workshop < ActiveRecord::Base
   scope :upcoming, -> { where('starts_at > ?', Time.now) }
 
   def self.refresh
+    ORGANIZER_IDS.each { |id| sync_workshops_for_organizer(id) }
+  end
+
+  def venue_map_url
+    params = { q: [venue_name, venue_address_1, venue_address_2, venue_city_region, venue_postal_code].compact.join(","),
+               ll: [venue_latitude, venue_longitude].join(",") }
+    "https://maps.google.com/?#{params.to_query}"
+  end
+
+  def venue_city_region
+    [venue_city, venue_region].compact.join(", ")
+  end
+
+  def self.sync_workshops_for_organizer(organizer_id)
     conn = Faraday.new(url: "https://www.eventbriteapi.com") do |req|
       req.adapter Faraday.default_adapter
 
-      # Chris's organizer id: 7593828287
-      # Tim's organizer id: 7808542841
-      #
-      req.params['organizer.id'] = "7808542841"
+      req.params['organizer.id'] = organizer_id
     end
 
     conn.authorization :Bearer, "2GDA75C44FFSKX6MATRI"
@@ -54,16 +68,6 @@ class Workshop < ActiveRecord::Base
     end
 
     workshops
-  end
-
-  def venue_map_url
-    params = { q: [venue_name, venue_address_1, venue_address_2, venue_city_region, venue_postal_code].compact.join(","),
-               ll: [venue_latitude, venue_longitude].join(",") }
-    "https://maps.google.com/?#{params.to_query}"
-  end
-
-  def venue_city_region
-    [venue_city, venue_region].compact.join(", ")
   end
 
 end
