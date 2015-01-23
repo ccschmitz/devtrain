@@ -1,33 +1,26 @@
 .hero
   .content
-    h1 Professional web developer training
-    p Level up your skills with online training or an in-person workshop.
+    = image_tag('logo.png')
+    p Training and Consulting for Open Source<br>Web Development Technology.
 
-    .row
-      .medium-4.medium-offset-2.columns
-        = link_to('Screencasts', lessons_path, class: 'button large round secondary expand')
-      .medium-4.columns
-        = link_to('Upcoming Workshops', workshops_path, class: 'button large round expand')
-      .medium-2.columns
+.workshops#workshops
+  h2.text-center Upcoming Workshops
 
-.cta
   .row
-    .medium-9.columns
-      h2 The easiest way to become a great developer.
-    .medium-3.columns
-      a.button.expand Let's Do This!
+    .medium-6.medium-offset-3.columns
+      = render @workshops
 
-.row
-  .medium-6.columns
-    h2 Upcoming Workshops
-    hr
+.testimonials#testimonials
+  h2.text-center What People Are Saying
 
-    = render @workshops
+  .row
+    .medium-6.columns
+      = render 'testimonials/bryan_willacker'
+      = render 'testimonials/jason_beck'
+      = render 'testimonials/jason_gegere'
 
-  .medium-6.columns
-    h2 What People Are Saying
-    hr
-
-    = render 'testimonials/tommy_byrne'
+    .medium-6.columns
+      = render 'testimonials/tommy_byrne'
+      = render 'testimonials/matt_keesey'
 
 = render 'instructors'

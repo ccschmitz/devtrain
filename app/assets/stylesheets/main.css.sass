@@ -10,36 +10,53 @@
 .row
   max-width: 1200px
 
+// Typography
+body
+  font-family: $body-font-family
+  font-size: 14px
+
+h1, h2, h3, h4
+  font-weight: 900
+
+h5, h6
+  font-family: $alt-font-family
+  font-weight: 600
+
+p
+  font-family: $alt-font-family
+
 // Navigation
-.top-bar
-  margin-bottom: 30px
+.main-nav
+  position: absolute
+  text-align: center
+  top: 0
+  width: 100%
 
-  .name img
-    height: 25px
-    margin-botton: -2px
-    width: 120px
-
-  .top-bar-section a
+  a
+    border-bottom: 3px solid transparent
+    color: #fff
+    display: inline-block
+    font-size: 14px
     letter-spacing: 1px
+    margin: 25px
+    padding: 0 0 8px
+    text-transform: uppercase
+    transition: 0.2s all
 
-  .button
-    top: 15px
+    &:hover
+      border-bottom: 3px solid #fff
 
-.pages-home .top-bar
-  margin-bottom: 0
+.top-bar
+  section
+    a
+      color: #fff
 
 // Footer
 .footer
-  background: #eee
-  border-bottom: 1px solid #ddd
-  border-top: 1px solid #fff
-  padding: 20px 0
-
-  nav a
-    margin-right: 15px
-
-  p
-    margin: 0
+  background: #c32f34
+  color: #fff
+  padding: 45px 0
+  text-align: center
 
 // TODO: Remove this once there is content here
 .footer-fixed .footer
@@ -73,35 +90,43 @@ $hero-padding: 150px
     margin: 0 auto
     max-width: 900px
 
+  img
+    margin-bottom: 30px
+    max-width: 300px
+
   h1, p
     color: #fff
 
   h1
     font-weight: 900
-    margin-bottom: 10px
+    margin-bottom: 65px
 
   p
+    font-family: $body-font-family
     font-size: 24px
     font-weight: 600
-    margin-bottom: 50px
+    letter-spacing: 2px
     opacity: 0.8
 
-// CTA Bar
-.cta
-  background: #eee
-  border-bottom: 1px solid #ddd
-  margin: 0 0 25px
-  padding: 35px 0
+.workshops
+  margin: 30px 0 0
+  text-align: center
 
-  h2
-    margin: 0
+  h3
+    margin: 30px 0 10px
 
-  .button
-    margin: 0
+  h4
+    font-size: 16px
+    font-weight: 700
+    margin: 0 0 45px
+
+  p
+    color: #777
+    margin-bottom: 25px
 
 // Instructors
 .instructors
-  background: $primary-color
+  background: #353740
   color: #fff
   padding: 40px 0 20px
 
@@ -111,13 +136,19 @@ $hero-padding: 150px
   h2, h3
     color: #fff
 
+  p
+    font-family: $body-font-family
+
   a
     color: #fff
     text-decoration: underline
 
 // Testimonials
-.testimonial
-  margin: 0 0 25px
+.testimonials
+  margin: 0 0 45px
+
+  h2
+    margin: 30px 0 60px
 
   blockquote
     background: #f4f4f4
@@ -154,7 +185,7 @@ $hero-padding: 150px
 
   .avatar
     display: block
-    margin: 0 auto
+    margin: 0 auto 30px
 
 // Avatars
 .avatar

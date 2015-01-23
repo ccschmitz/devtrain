@@ -1,19 +1,4 @@
-nav.top-bar role="navigation"
-  .container
-    ul.title-area
-      li.name
-        h1 = link_to(image_tag('logo.png', alt: 'DevTrain'), root_path)
-      li.toggle-topbar.menu-icon
-        = link_to('<span>Menu</span>'.html_safe, '#')
-
-    section.top-bar-section
-      ul.left
-        li = link_to('Workshops', workshops_path)
-        li = link_to('Testimonials', testimonials_path)
-
-      ul.right
-        - if user_signed_in?
-          li = link_to('Sign Out', destroy_user_session_path, method: :delete)
-        - else
-          li = link_to('Sign In', new_user_session_path)
-          li.active = link_to('Sign Up', new_user_registration_path)
+nav.main-nav role="navigation"
+  = link_to('Workshops', '#workshops')
+  = link_to('Testimonials', '#testimonials')
+  = link_to('Our Team', '#instructors')

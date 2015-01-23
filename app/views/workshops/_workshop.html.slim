@@ -1,5 +1,7 @@
+hr
+
 h3 = workshop.name
-h5 #{workshop.starts_at.to_s(:long_ordinal)} at #{link_to(workshop.venue_name, workshop.venue_map_url, target: '_blank')}
+h4 #{workshop.starts_at.to_s(:long_ordinal)} at #{link_to(workshop.venue_name, workshop.venue_map_url, target: '_blank')}
 
 p = truncate(workshop.description, length: 500)
 

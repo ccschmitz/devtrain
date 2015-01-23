@@ -7,6 +7,7 @@ gem 'rails', '4.1.6'
 
 gem 'activeadmin', github: 'activeadmin', branch: 'master'
 gem 'acts-as-taggable-on'
+gem 'autoprefixer-rails'
 gem 'bcrypt'
 gem 'better_errors'
 gem 'binding_of_caller'
